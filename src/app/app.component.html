@@ -1,15 +1,21 @@
 <!-- structural directive -->
-<div *ngFor="let item of toDo">
+<!-- <div *ngFor="let item of toDo">
   <div class="incomplete" *ngIf="!item.isCompleted">{{item.title}}</div>
   <div class="completed" *ngIf="item.isCompleted">
     {{item.title}}
   </div>
-</div>
+</div> -->
 
 <!-- attribute directive -->
-<ng-container *ngFor="let item of toDo">
-  <!-- <div class="incomplete" *ngIf="!item.isCompleted">{{item.title}}</div> -->
+<!-- <ng-container *ngFor="let item of toDo">
   <div [ngClass]="{'completed':item.isCompleted, 'incomplete': !item.isCompleted}" [ngStyle]="{'font-weight': 'bold'}">
     {{item.title}}
   </div>
+</ng-container> -->
+
+<ng-container *ngFor="let item of toDo">
+  <!-- <div [ngClass]="{'completed':item.isCompleted, 'incomplete': !item.isCompleted}" [ngStyle]="{'font-weight': 'bold'}">
+    {{item.title}}
+  </div> -->
+  <app-task [task]="item"></app-task>
 </ng-container>
