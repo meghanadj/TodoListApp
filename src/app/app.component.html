@@ -12,7 +12,7 @@
     {{item.title}}
   </div>
 </ng-container> -->
-
+<button (click)="createTodo()">Create TODO</button>
 <ng-container *ngFor="let item of toDo">
   <!-- <div [ngClass]="{'completed':item.isCompleted, 'incomplete': !item.isCompleted}" [ngStyle]="{'font-weight': 'bold'}">
     {{item.title}}

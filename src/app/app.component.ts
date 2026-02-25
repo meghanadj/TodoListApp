@@ -55,5 +55,8 @@ export class AppComponent {
       }
     }
   ]
+  createTodo() {
+    console.log("ToDo created")
+  }
 }
 

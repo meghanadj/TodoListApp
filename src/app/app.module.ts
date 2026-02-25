@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { DescriptionComponent } from './task/description/description.component';
 import { AssignedComponent } from './task/assigned/assigned.component';
+import { CreateToDoComponent } from './create-to-do/create-to-do.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     AssignedComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    CreateToDoComponent
   ],
   imports: [
     BrowserModule,
