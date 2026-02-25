@@ -3,13 +3,17 @@ export interface Task {
     title?: string,
     description?: string,
     isCompleted?: boolean,
-    priority?: 'High' | 'Medium' | 'Low',
+    priority?: Priority,
     dueDate?: Date,
     createdAt?: Date,
     tags?: Array<string>,
-    assignedTo?: {
-        userId?: number,
-        name?: string,
-        email?: string
-    }
+    assignedTo?: Assignment
 }
+
+interface Assignment {
+    userId?: number,
+    name?: string,
+    email?: string
+}
+
+type Priority = 'High' | 'Medium' | 'Low'
