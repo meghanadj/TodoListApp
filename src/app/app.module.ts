@@ -8,6 +8,7 @@ import { DescriptionComponent } from './task/description/description.component';
 import { AssignedComponent } from './task/assigned/assigned.component';
 import { CreateToDoComponent } from './create-to-do/create-to-do.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodolistComponent } from './todolist/todolist.component';
     AssignedComponent,
     DescriptionComponent,
     CreateToDoComponent,
-    TodolistComponent
+    TodolistComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,

@@ -60,4 +60,7 @@ export class TodolistComponent {
   createTodo() {
     this.router.navigate(["create-to-do"]);
   }
+  userProfile() {
+    this.router.navigate(["user-profile"])
+  }
 }
