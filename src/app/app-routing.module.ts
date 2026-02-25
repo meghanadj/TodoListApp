@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { TodolistComponent } from './todolist/todolist.component';
+import { CreateToDoComponent } from './create-to-do/create-to-do.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "",
+    component: TodolistComponent
+  },
+  {
+    path: "create-to-do",
+    component: CreateToDoComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,4 @@
+<button (click)="createTodo()">Create TODO</button>
+<ng-container *ngFor="let item of toDo">
+    <app-task [task]="item"></app-task>
+</ng-container>
