@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Assigned } from '../Interfaces/assigned.interface';
+import { Assigned } from 'src/app/Interfaces/assigned.interface';
 
 @Component({
   selector: 'app-assigned',

@@ -3,11 +3,12 @@
         [ngStyle]="{'font-weight': 'bold'}">
         Title: {{task.title}} <app-assigned [assigned]="task.assignedTo"></app-assigned>
         <p> id: {{task.id}}</p>
-        <p> desc: {{task.description}}</p>
+        <!-- <p> desc: {{task.description}}</p>
         <p> createdAt: {{task.createdAt}}</p>
         <p>dueDate: {{task.dueDate}}</p>
         <p>isCompleted: {{task.isCompleted}}</p>
         <p>priority: {{task.priority}}</p>
-        <p>tags: {{task.tags}}</p>
+        <p>tags: {{task.tags}}</p> -->
+        <app-description [description]="taskDescription"></app-description>
     </div>
 </div>

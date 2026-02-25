@@ -13,4 +13,4 @@ export interface Task {
 }
 
 
-type Priority = 'High' | 'Medium' | 'Low'
+export type Priority = 'High' | 'Medium' | 'Low'
