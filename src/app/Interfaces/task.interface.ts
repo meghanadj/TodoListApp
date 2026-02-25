@@ -1,3 +1,5 @@
+import { Assigned } from "./assigned.interface"
+
 export interface Task {
     id?: number,
     title?: string,
@@ -7,13 +9,8 @@ export interface Task {
     dueDate?: Date,
     createdAt?: Date,
     tags?: Array<string>,
-    assignedTo?: Assignment
+    assignedTo?: Assigned
 }
 
-interface Assignment {
-    userId?: number,
-    name?: string,
-    email?: string
-}
 
 type Priority = 'High' | 'Medium' | 'Low'

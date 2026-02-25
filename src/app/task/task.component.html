@@ -1,6 +1,6 @@
 <div class="card">
     <div [ngClass]="{'completed':task.isCompleted, 'incomplete': !task.isCompleted}"
         [ngStyle]="{'font-weight': 'bold'}">
-        {{task.title}} - {{task.assignedTo?.name}} / {{task.assignedTo?.userId}} / {{task.assignedTo?.email}}
+        {{task.title}} - <app-assigned [assigned]="task.assignedTo"></app-assigned>
     </div>
 </div>
