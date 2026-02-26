@@ -9,6 +9,7 @@ import { AssignedComponent } from './task/assigned/assigned.component';
 import { CreateToDoComponent } from './create-to-do/create-to-do.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

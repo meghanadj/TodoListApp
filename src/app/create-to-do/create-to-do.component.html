@@ -1,1 +1,39 @@
-<p>create-to-do works!</p>
+<form (ngSubmit)="addTask(taskForm)">
+    <div>
+        <!-- Title -->
+        <label class="form-label">Task Title</label>
+        <input type="text" name="title" class="form-control" required minlength="3" [(ngModel)]="taskForm.title">
+    </div>
+
+    <div>
+        <label class="form-label">Task Description</label>
+        <input type="text" name="description" class="form-control" required minlength="3"
+            [(ngModel)]="taskForm.description">
+    </div>
+    <!-- <label class="form-label">Assigned To</label>
+    <input type="text" name="assignedTo" class="form-control" required minlength="3"
+        [(ngModel)]="taskForm.assignedTo?.name">
+
+    <label class="form-label">Email</label>
+    <input type="text" name="email" class="form-control" required minlength="3" [(ngModel)]="taskForm.assignedTo.email"> -->
+    <div>
+        <label class="form-check">Is Completed</label>
+        <input type="checkbox" name="iscomplete" class="form-control" [(ngModel)]="taskForm.isCompleted">
+    </div>
+
+    <label class="form-check">Priority</label>
+    <div *ngFor="let p of priorities" class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" name="priority" [value]="p" [(ngModel)]="taskForm.priority"
+            required #priority="ngModel">
+
+        <label class="form-check-label">
+            {{ p }}
+        </label>
+    </div>
+    <!-- Submit -->
+    <div>
+        <button type="submit" class="btn btn-primary rounded-3">
+            Add Task
+        </button>
+    </div>
+</form>
