@@ -11,11 +11,9 @@ export class TaskComponent implements OnInit {
   taskDescription = {}
 
   constructor() {
-    console.log(this.task);
   }
 
   ngOnInit() {
-    console.log(this.task);
     this.taskDescription = { 'description': this.task.description, 'createdAt': this.task.createdAt, 'dueDate': this.task.dueDate, 'isCompleted': this.task.isCompleted, 'priority': this.task.priority, 'tags': this.task.tags }
   }
 }

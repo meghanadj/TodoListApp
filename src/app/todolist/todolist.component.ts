@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from '../Interfaces/task.interface';
 import { Router } from '@angular/router';
 
@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   templateUrl: './todolist.component.html',
   styleUrls: ['./todolist.component.scss']
 })
-export class TodolistComponent {
+export class TodolistComponent implements OnInit {
   title = 'MeghanaTodoList';
-  toDo: Array<Task> = [
+  toDos: Array<Task> = [
     {
       "id": 1,
       "title": "Prepare Angular interview questions",
@@ -56,7 +56,19 @@ export class TodolistComponent {
       }
     }
   ]
+
+
   constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    let task = history.state.currentTask
+
+    console.log("todo list component log");
+    if (task) {
+      this.toDos.push(task)
+    }
+
+  }
   createTodo() {
     this.router.navigate(["create-to-do"]);
   }
